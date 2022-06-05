@@ -20,6 +20,21 @@ int main()
 
 	// float distance = DistanceSq(right, left);
 	// std::cout << "Distance between: " << distance << "\n";
+	
+	// vec3 nor = Normalized(right);
+	//std::cout << "Right normalise: " << nor << "\n";
+	
+	// vec3 cross = Cross(right, left);
+	// std::cout << "Cross product: " << cross << "\n";
+
+	// float angle = Angle(right, left);
+	// std::cout << "Angle between: " << angle << "\n";
+
+	// vec3 proj = Project(right, left);
+	// std::cout << "Projected value: " << proj << "\n";
+
+	// vec3 reflectoin = Reflection(right, left);
+	// std::cout << "Reflection value: " << reflectoin << "\n";
 
 	// float dotProduct = Dot(right, left);
 	// std::cout << "The 3D dot product: " << dotProduct;

@@ -192,6 +192,7 @@ vec3 Cross(const vec3& l, const vec3& r) {
 	return result;
 }
 
+// returned in radians
 float Angle(const vec2& l, const vec2& r) {
 	return acosf(Dot(l, r) / sqrtf(MagnitudeSq(l) * MagnitudeSq(r)));
 }

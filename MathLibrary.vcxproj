@@ -19,10 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Matrices.h" />
     <ClInclude Include="Vectors.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Matrices.cpp" />
     <ClCompile Include="Vectors.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
