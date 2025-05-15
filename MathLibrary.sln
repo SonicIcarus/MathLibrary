@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MathLibrary", "MathLibrary.vcxproj", "{9FA2901D-FEF5-42B3-B28C-719E82B36843}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FA2901D-FEF5-42B3-B28C-719E82B36843}.Debug|x64.ActiveCfg = Debug|x64
+		{9FA2901D-FEF5-42B3-B28C-719E82B36843}.Debug|x64.Build.0 = Debug|x64
+		{9FA2901D-FEF5-42B3-B28C-719E82B36843}.Debug|x86.ActiveCfg = Debug|Win32
+		{9FA2901D-FEF5-42B3-B28C-719E82B36843}.Debug|x86.Build.0 = Debug|Win32
+		{9FA2901D-FEF5-42B3-B28C-719E82B36843}.Release|x64.ActiveCfg = Release|x64
+		{9FA2901D-FEF5-42B3-B28C-719E82B36843}.Release|x64.Build.0 = Release|x64
+		{9FA2901D-FEF5-42B3-B28C-719E82B36843}.Release|x86.ActiveCfg = Release|Win32
+		{9FA2901D-FEF5-42B3-B28C-719E82B36843}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6BCB3F4-72C1-42B1-A3B5-F91CA70D4387}
+	EndGlobalSection
+EndGlobal
