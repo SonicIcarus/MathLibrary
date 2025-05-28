@@ -3,57 +3,73 @@
 
 int main()
 {
-	vec2 right = { 2.0f, 100.0f };
-	vec3 left = { 1.0f, 50.0f, 600.0f };
+	vec2 right_2d = { 1.2f, 20.7f };
+	vec3 right_3d = { 1.0f, 50.0f, 600.0f };
 
-	std::cout << "Vec2\n\n\nThe vec2 is made up of:\nx: " << right.x << "\ny " << right.y << "\n\n";
-	std::cout << "The vec3 is made up of:\nx: " << left.x << "\ny " << left.y << "\nz " << left.z << "\n\n\n";
+	vec2 left_2d = { 5.0f, 15.0f };
+	vec3 left_3d = { 2.0f, 25.0f, -200.0f };
 
-	vec2 testVec = { 1.0f, 200.0f};
-	vec2 result = right + testVec;
+	std::cout << "2D: vec1: " << right_2d << "\nvec2: " << left_2d << "\n";
+	std::cout << "3D: vec1: " << right_3d << "\nvec2: " << left_3d << "\n\n";
 
-	std::cout << "the result of adding is: " << result.x << " " << result.y << "\n\n\n";
+	float scalar = 3.0f;
 
-	result = { 0.0f,0.0f };
+	// 2D
+	vec2 arithmetic2D = right_2d * scalar;
+	std::cout << "arithmetic2D: " << arithmetic2D << "\n\n";
 
-	result = right - testVec;
+	float magnitudeRight2D = MagnitudeSq(right_2d);
+	std::cout << "RightMagnitude: " << magnitudeRight2D << "\n\n";
+	float magnitudeLeft2D = MagnitudeSq(left_2d);
+	std::cout << "LeftMagnitude: " << magnitudeLeft2D << "\n\n";
 
-	std::cout << "the result of subtracting is: " << result.x << " " << result.y << "\n\n\n";
+	float distance2D = DistanceSq(right_2d, left_2d);
+	std::cout << "Distance between: " << distance2D << "\n\n";
 
-	result = { 0.0f,0.0f };
+	vec2 nor2D = Normalized(right_2d);
+	std::cout << "Right normalise: " << nor2D << "\n\n";
 
-	result = right * testVec;
+	float angle2D = Angle(right_2d, left_2d);
+	std::cout << "Angle between: " << angle2D << "\n\n";
 
-	std::cout << "the result of multiplying by a vector is: " << result.x << " " << result.y << "\n\n\n";
+	vec2 proj2D = Project(right_2d, left_2d);
+	std::cout << "Projected value: " << proj2D << "\n\n";
 
-	result = { 0.0f,0.0f };
+	vec2 reflectoin2D = Reflection(right_2d, left_2d);
+	std::cout << "Reflection value: " << reflectoin2D << "\n\n";
 
-	result = right * 2;
+	float dotProduct2D = DotProduct(right_2d, left_2d);
+	std::cout << "The 2D dot product: " << dotProduct2D << "\n\n";
 
-	std::cout << "the result of multiplying by a scalar is: " << result.x << " " << result.y << "\n\n\nVec3\n\n\n";
+	//3D
+	vec3 arithmetic3D = right_3d * scalar;
+	std::cout << "arithmetic3D: " << arithmetic3D << "\n\n";
 
-	vec3 testVec3 = { 1.0f, 200.0f, 300.0f };
-	vec3 result3 = left + testVec3;
+	float magnitudeRight3D = MagnitudeSq(right_3d);
+	std::cout << "RightMagnitude: " << magnitudeRight3D << "\n\n";
+	float magnitudeLeft3D = MagnitudeSq(left_3d);
+	std::cout << "LeftMagnitude: " << magnitudeLeft3D << "\n\n";
 
-	std::cout << "the result of adding is: " << result3.x << " " << result3.y << " " << result3.z << "\n\n\n";
+	float distance3D = DistanceSq(right_3d, left_3d);
+	std::cout << "Distance between: " << distance3D << "\n\n";
 
-	result3 = { 0.0f,0.0f,0.0f };
+	vec3 nor3D = Normalized(right_3d);
+	std::cout << "Right normalise: " << nor3D << "\n\n";
 
-	result3 = left - testVec3;
+	vec3 cross3D = CrossProduct(right_3d, left_3d);
+	std::cout << "Cross product: " << cross3D << "\n\n";
 
-	std::cout << "the result of subtracting is: " << result3.x << " " << result3.y << " " << result3.z << "\n\n\n";
+	float angle3D = Angle(right_3d, left_3d);
+	std::cout << "Angle between: " << angle3D << "\n\n";
 
-	result3 = { 0.0f,0.0f,0.0f };
+	vec3 proj3D = Project(right_3d, left_3d);
+	std::cout << "Projected value: " << proj3D << "\n\n";
 
-	result3 = left * testVec3;
+	vec3 reflectoin3D = Reflection(right_3d, left_3d);
+	std::cout << "Reflection value: " << reflectoin3D << "\n\n";
 
-	std::cout << "the result of multiplying by a vector is: " << result3.x << " " << result3.y << " " << result3.z << "\n\n\n";
-
-	result3 = { 0.0f,0.0f,0.0f };
-
-	result3 = left * 2;
-
-	std::cout << "the result of multiplying by a scalar is: " << result3.x << " " << result3.y << " " << result3.z << "\n\n\n";
+	float dotProduct3D = DotProduct(right_3d, left_3d);
+	std::cout << "The 3D dot product: " << dotProduct3D << "\n\n";
 
 	return 0;
 }
