@@ -2,68 +2,65 @@
 
 // Macro that uses Float Epsilon as a threshold buffer for comparing two floating point numbers.
 // This helps us to determine if they are close enough to be considered equal, accouting for prescison errors.
-#define CMP(x, y)                    \
-    (fabsf((x)–(y)) <= FLT_EPSILON * \
-      fmaxf(1.0f,                    \
-      fmaxf(fabsf(x), fabsf(y)))     \
-   )
+#define CMP(x, y) \
+		(fabsf(x - y) <= FLT_EPSILON * fmaxf(1.0f, fmaxf(fabsf(x), fabsf(y))))
 
 vec2 operator+(const vec2& l, const vec2& r)
 {
-	return vec2();
+	return { l.x + r.x, l.y + r.y };
 }
 
 vec3 operator+(const vec3& l, const vec3& r)
 {
-	return vec3();
+	return { l.x + r.x, l.y + r.y, l.z + r.z };
 }
 
 vec2 operator-(const vec2& l, const vec2& r)
 {
-	return vec2();
+	return { l.x - r.x, l.y - r.y };
 }
 
 vec3 operator-(const vec3& l, const vec3& r)
 {
-	return vec3();
+	return { l.x - r.x, l.y - r.y, l.z - r.z };
 }
 
 vec2 operator*(const vec2& l, const vec2& r)
 {
-	return vec2();
+	return { l.x * r.x, l.y * r.y };
 }
 
 vec3 operator*(const vec3& l, const vec3& r)
 {
-	return vec3();
+	return { l.x * r.x, l.y * r.y, l.z * r.z };
 }
 
 vec2 operator*(const vec2& l, float r)
 {
-	return vec2();
+	return { l.x * r, l.y * r };
 }
 
 vec3 operator*(const vec3& l, float r)
 {
-	return vec3();
+	return { l.x * r, l.y * r, l.z * r };
 }
 
 bool operator==(const vec2& l, const vec2& r)
 {
-	return false;
+	return CMP(l.x, r.x) && CMP(l.y, r.y);
 }
 
 bool operator==(const vec3& l, const vec3& r)
 {
-	return false;
+	return CMP(l.x, r.x) && CMP(l.y, r.y) && CMP(l.z, r.z);
 }
 
 bool operator!=(const vec2& l, const vec2& r)
 {
-	return false;
+	return !(l == r);
 }
 
 bool operator!=(const vec3& l, const vec3& r)
 {
-	return false;
+	return !(l == r);
 }
